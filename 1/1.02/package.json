@@ -1,0 +1,9 @@
+{
+    "name": "todo-app",
+    "version": "1.0.0",
+    "description": "A simple todo application",
+    "main": "app.js",
+    "dependencies": {
+      "express": "^4.17.2"
+    }
+}
