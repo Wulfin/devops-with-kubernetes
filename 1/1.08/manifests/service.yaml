@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-app-svc
+spec:
+  selector:
+    app: todo-app # This is the app as declared in the deployment.
+  ports:
+    - protocol: TCP
+      port: 3000 # This is a port that is available to the cluster, in this case it can be ~ anything
+      targetPort: 3000 # This is the target port

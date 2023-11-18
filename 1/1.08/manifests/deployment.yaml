@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-app
+  template:
+    metadata:
+      labels:
+        app: todo-app
+    spec:
+      containers:
+      - name: todo-app
+        image: saifffff/todo-app:0.5
+        ports:
+        - containerPort: 3000 # Container port, can be overridden with PORT env variable
+        env:
+        - name: PORT
+          value: "3000" # Default port

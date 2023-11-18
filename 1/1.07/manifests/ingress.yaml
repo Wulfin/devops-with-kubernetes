@@ -6,10 +6,18 @@ spec:
   rules:
     - http:
         paths:
-        - path: /
+        - path: /status
           pathType: Prefix
           backend:
             service:
               name: log-output-svc
               port:
                 number: 3000
+        - path: /pingpong
+          pathType: Prefix
+          backend:
+            service:
+              name: pingpong-svc
+              port:
+                number: 3001
+        
